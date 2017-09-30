@@ -26,7 +26,7 @@ func ExampleNew() {
 	// user_stringer => cacheC
 }
 
-func ExampleAdd() {
+func ExampleKhash_Add() {
 	k := New()
 	k.Add("cacheA")
 	k.Add("cacheB")
@@ -66,7 +66,7 @@ func ExampleAdd() {
 	// user_stringer => cacheE
 }
 
-func ExampleRemove() {
+func ExampleKhash_Remove() {
 	k := New()
 	k.Add("cacheA")
 	k.Add("cacheB")

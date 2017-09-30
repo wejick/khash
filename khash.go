@@ -23,7 +23,7 @@ var (
 	errReplicaNotEmpty = errors.New("replica is not empty. set replica before Node")
 )
 
-//New create new instance of khash
+//New create khash instance
 func New(options ...func(*Khash) error) (newInstance *Khash) {
 	newInstance = &Khash{}
 
