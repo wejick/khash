@@ -1,3 +1,7 @@
+[![Build Status](https://travis-ci.org/wejick/khash.svg?branch=master)](https://travis-ci.org/wejick/khash) [![Coverage Status](https://coveralls.io/repos/github/wejick/khash/badge.svg?branch=master)](https://coveralls.io/github/wejick/khash?branch=master)
+[![Godoc](http://img.shields.io/badge/godoc-reference-blue.svg?style=flat)](https://godoc.org/github.com/wejick/khash)
+[![license](http://img.shields.io/badge/license-MIT-red.svg?style=flat)](https://github.com/wejick/khash/blob/master/LICENSE)
+
 # KHash - consistent hashing implementation in go
 
 Khash is based on stathat implementation

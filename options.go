@@ -1,6 +1,6 @@
 package khash
 
-//NumOfReplica set replica number
+//NumOfReplica set replica number.
 //This is option function to pass as argument for New function
 func NumOfReplica(n int) func(*Khash) error {
 	return func(k *Khash) (err error) {
@@ -12,7 +12,7 @@ func NumOfReplica(n int) func(*Khash) error {
 	}
 }
 
-//Node set nodes to initialize
+//Node set nodes to initialize.
 //This is option function to pass as argument for New function
 func Node(nodes []string) func(*Khash) error {
 	return func(k *Khash) (err error) {
