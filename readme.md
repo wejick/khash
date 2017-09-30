@@ -20,41 +20,41 @@ Khash is based on stathat implementation
 This project is licensed under MIT license you can find in LICENSE file
 
 # Get Started
-```
-        k := New(NumOfReplica(25),
-                Node([]string{"cacheA", "cacheB", "cacheC"}))
-        users := []string{"user_mcnulty", "user_bunk", "user_omar", "user_bunny", "user_stringer"}
-	fmt.Println("initial state [A, B, C]")
-	for _, u := range users {
-		server, err := k.Get(u)
-		if err != nil {
-			log.Fatal(err)
-		}
-		fmt.Printf("%s => %s\n", u, server)
+```golang
+k := New(NumOfReplica(25),
+Node([]string{"cacheA", "cacheB", "cacheC"}))
+users := []string{"user_mcnulty", "user_bunk", "user_omar", "user_bunny", "user_stringer"}
+fmt.Println("initial state [A, B, C]")
+for _, u := range users {
+	server, err := k.Get(u)
+	if err != nil {
+		log.Fatal(err)
 	}
-	k.Remove("cacheC")
-	fmt.Println("\ncacheC removed [A, B]")
-	for _, u := range users {
-		server, err := k.Get(u)
-		if err != nil {
-			log.Fatal(err)
-		}
-		fmt.Printf("%s => %s\n", u, server)
+	fmt.Printf("%s => %s\n", u, server)
+}
+k.Remove("cacheC")
+fmt.Println("\ncacheC removed [A, B]")
+for _, u := range users {
+	server, err := k.Get(u)
+	if err != nil {
+		log.Fatal(err)
 	}
-	// Output:
-	// initial state [A, B, C]
-	// user_mcnulty => cacheA
-	// user_bunk => cacheA
-	// user_omar => cacheA
-	// user_bunny => cacheC
-	// user_stringer => cacheC
-	//
-	// cacheC removed [A, B]
-	// user_mcnulty => cacheA
-	// user_bunk => cacheA
-	// user_omar => cacheA
-	// user_bunny => cacheB
-	// user_stringer => cacheB
+	fmt.Printf("%s => %s\n", u, server)
+}
+// Output:
+// initial state [A, B, C]
+// user_mcnulty => cacheA
+// user_bunk => cacheA
+// user_omar => cacheA
+// user_bunny => cacheC
+// user_stringer => cacheC
+//
+// cacheC removed [A, B]
+// user_mcnulty => cacheA
+// user_bunk => cacheA
+// user_omar => cacheA
+// user_bunny => cacheB
+// user_stringer => cacheB
 
 ```
 
